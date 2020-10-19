@@ -1131,6 +1131,8 @@ export default class Router implements BaseRouter {
     }
 
     const route = removePathTrailingSlash(pathname)
+    url = removePathTrailingSlash(url)
+
     await Promise.all([
       this.pageLoader.prefetchData(
         url,
